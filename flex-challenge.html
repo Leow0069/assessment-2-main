@@ -4,13 +4,21 @@
     <title>Flex Challenge</title>
     <style>
       /*
-          Task 1: You are to add a @media query to convert flex direction from row to column when the device width is 800px and lower.
+          Task 1: You are to add a @media query to convert flex direction 
+          from row to column when the device width is 800px and lower.
       */
 
       .container {
         display: flex;
         border: 3px solid red;
-        width: 50%;
+        width: 80%;
+      }
+
+      @media (max-width: 800px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+        }
       }
 
       .item {

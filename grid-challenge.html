@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
       /* 
-            Task 2: You are to add a @media query to convert grid from 4 to 2 columns with device width is 800px and lower.
+            Task 2: You are to add a @media query to convert grid from 
+            4 to 2 columns with device width is 800px and lower.
         */
       .container {
         display: grid;
@@ -13,11 +14,19 @@
         grid-template-rows: auto auto auto auto;
       }
 
+      @media (max-width:800px){
+        .container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
       .item {
         padding: 50px;
         border: 3px solid blue;
         margin: 10px;
       }
+
     </style>
   </head>
   <body>
@@ -37,3 +46,4 @@
     </div>
   </body>
 </html>
+      

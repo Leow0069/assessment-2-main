@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
       /*
-            Task 3: When the device width is 800px and lower, only show "header menu", "main" and "footer".
+            Task 3: When the device width is 800px and lower, only show 
+            "header menu", "main" and "footer".
         */
       .container {
         display: grid;
@@ -15,6 +16,17 @@
           "left-menu main main"
           "left-menu footer footer";
         height: 100vh;
+      }
+      @media (max-width: 800px) {
+        .container {
+          display: grid;
+          grid-template-areas:
+          "header-menu"
+          "main"
+          "footer";
+          grid-template-columns: 100%;
+          grid-template-rows: 1fr 1fr 1fr;
+        }
       }
       .header-logo {
         grid-area: header-logo;
